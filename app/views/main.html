@@ -1,0 +1,13 @@
+<form>
+<input type="text" autofocus placeholder="Name" ng-model="userInput"/>
+<br />
+<button id="addNameButton" ng-click="addName(userInput)">Add</button>
+</form>
+
+<ul>
+	<div ng-repeat="i in unicorns">
+		<li ng-bind="i"></li>
+		<button ng-click="deleteName($index)">x</button>
+	</div>
+</ul>
+<button ng-click="clearAll()">Clear</button>
